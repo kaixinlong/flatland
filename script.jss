@@ -1,11 +1,14 @@
 var square = document.getElementById('square');
 
 function changeColour(Colour){
-    square.background = colour;
+    square.style.background = colour;
 }
 
 square.addEventListener('click',(event)=> changeColour('green'))
 
+/*create hover effect */
+square.addEventListener('mouseover',(event)=> changeColour('green'));
+square.addEventListener('mouseout',(event)=> changeColour('red'));
 
 function createBuzzwordPhrase() {
     /* See https://en.wikipedia.org/wiki/List_of_buzzwords */
